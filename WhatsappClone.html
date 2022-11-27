@@ -7,45 +7,94 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
         <link rel="icon" type="image/x-icon" href="whatsapp.ico" />
         <style>
-            .mh {
-                font-family: Arial, Helvetica, sans-serif;
+            :root{
+                font-size:15px;
+                ---primaryColor:#075E54;
+                ---secondaryColor:#AAA9A9;
+                ---tertiaryColor:#25D366;
+                
             }
-            .mh {
-                color: white;
+            *{
+                margin:0;
+                padding:0;
+                font-family:inherit;
+
             }
             header {
-                background-color: rgb(3, 123, 39);
+                background-color: var(---primaryColor);
                 padding: 0%;
                 margin-top: 0%;
+            }
+            header .container{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                color:white;    
+            }
+            .container{
+                margin:0 1.2em ;
             }
             body {
                 background-color: #ffffff;
             }
+            .pp{
+                border-top-left-radius: 50%;
+                border-top-right-radius: 50% ;
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+                float: left;
+            }
+            .ico{
+                padding-left: 30px;
+                padding-top: 5px;
+                padding-top: 5px;
+            }
+            .navbar{
+                background-color: var(---primaryColor);
+                margin-bottom: 8px;
+                display: grid;
+                grid-template-columns: 16% 28% 28% 28%;
+                justify-content: space-between;
+                align-items: center;
+                text-align: center;
+            }
+            .nav{
+                color:var(---secondaryColor);
+                text-transform: uppercase;
+                padding:0.8em 0;
+            }
+            .nav.active{
+                border-bottom: 5px solid rgb(255, 255, 255);
+                color: aqua;
+            }
+            
+            
+
         </style>
 
         <title>Whatsapp</title>
     </head>
     <body>
         <header>
-            <div>
-                <h1 class="mh">Whatsapp</h1>
-            </div>
-            <div>
+            <div class="container">
+                <img class="ico" style="width: 28px;" src="https://cdn.icon-icons.com/icons2/373/PNG/256/Whatsapp_37229.png"><h2 class="logo">Whatsapp</h2>
+                <div>
                 <a role="button" class="bi bi-search"></a>
-                <a role="button" class="bi bi-three-dots-vertical"></a>
+                <a role="button" class="bi bi-three-dots-vertical menu"></a>
+                </div>
             </div>
         </header>
-        <nav>
+        <nav class="navbar">
             <span class="bi bi-camera-fill"></span>
-            <a role="button">Chats</a>
-            <a role="button">Status</a>
-            <a role="button">Calls</a>
+            <a role="button" class="nav">Chats</a>
+            <a role="button" class="nav">Status</a>
+            <a role="button" class="nav">Calls</a>
         </nav>
         <!-- chat section starts from below -->
         <section>
             <div>
                 <div>
-                    <img src="" alt="Profile Picture" />
+                    <img class="pp" style="width:50px ;" src="https://pyxis.nymag.com/v1/imgs/ce6/1f7/32552b811a3a2a25d2a9b2611d59332277-04-steve-jobs.rsquare.w700.jpg" alt="Profile Picture" />
                     <div>
                         <h6>Steve's doing Job</h6>
                         <p><i class="bi bi-check-all"></i>Hi, get the job done! 😏</p>
